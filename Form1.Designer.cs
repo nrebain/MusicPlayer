@@ -38,6 +38,7 @@
             this.AlbumCol = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SongsBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.resize = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.volumeTrackBar = new System.Windows.Forms.TrackBar();
             this.endTimeLbl = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.albumLayout = new System.Windows.Forms.FlowLayoutPanel();
-            this.resize = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.volumeTrackBar)).BeginInit();
@@ -88,7 +88,8 @@
             // 
             // listView1
             // 
-            this.listView1.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.listView1.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.listView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.NumberCol,
             this.TitleCol,
@@ -168,6 +169,16 @@
             this.panel1.Size = new System.Drawing.Size(784, 83);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // resize
+            // 
+            this.resize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.resize.Location = new System.Drawing.Point(762, 60);
+            this.resize.Name = "resize";
+            this.resize.Size = new System.Drawing.Size(21, 20);
+            this.resize.TabIndex = 10;
+            this.resize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resize_MouseDown);
+            this.resize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.resize_MouseUp);
             // 
             // pictureBox1
             // 
@@ -386,20 +397,11 @@
             // albumLayout
             // 
             this.albumLayout.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.albumLayout.AutoScroll = true;
             this.albumLayout.Location = new System.Drawing.Point(149, 43);
             this.albumLayout.Name = "albumLayout";
             this.albumLayout.Size = new System.Drawing.Size(635, 438);
             this.albumLayout.TabIndex = 9;
-            // 
-            // resize
-            // 
-            this.resize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.resize.Location = new System.Drawing.Point(762, 60);
-            this.resize.Name = "resize";
-            this.resize.Size = new System.Drawing.Size(21, 20);
-            this.resize.TabIndex = 10;
-            this.resize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.resize_MouseDown);
-            this.resize.MouseUp += new System.Windows.Forms.MouseEventHandler(this.resize_MouseUp);
             // 
             // Form1
             // 
@@ -410,8 +412,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.albumLayout);
+            this.Controls.Add(this.listView1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";

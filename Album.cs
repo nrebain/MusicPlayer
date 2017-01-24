@@ -15,12 +15,12 @@ namespace MusicPlayer
 
         List<Song> songs = new List<Song>();
 
-        public Album(string title, string artist, string year, string artFilePath)
+        public Album(string title, string artist, string albumArt)
         {
             this.title = title;
             this.artist = artist;
-            this.year = year;
-            this.artFilePath = artFilePath;
+            //this.year = year;
+            this.artFilePath = albumArt;
         }
         public string getTitle()
         {
@@ -34,5 +34,8 @@ namespace MusicPlayer
         {
             return this.year;
         }
+        public string getAlbumArt()
+        {
+            return artFilePath;        }
     }
 }

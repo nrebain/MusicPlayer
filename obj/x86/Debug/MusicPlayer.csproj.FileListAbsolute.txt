@@ -1,0 +1,15 @@
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\bin\x86\Debug\MusicPlayer.exe.config
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\bin\x86\Debug\MusicPlayer.exe
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\bin\x86\Debug\MusicPlayer.pdb
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\bin\x86\Debug\NAudio.dll
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\bin\x86\Debug\System.Data.SQLite.dll
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\bin\x86\Debug\taglib-sharp.dll
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\bin\x86\Debug\NAudio.xml
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\bin\x86\Debug\System.Data.SQLite.xml
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\obj\x86\Debug\MusicPlayer.csprojResolveAssemblyReference.cache
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\obj\x86\Debug\MusicPlayer.Form1.resources
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\obj\x86\Debug\MusicPlayer.Properties.Resources.resources
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\obj\x86\Debug\MusicPlayer.csproj.GenerateResource.Cache
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\obj\x86\Debug\MusicPlayer.exe
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\obj\x86\Debug\MusicPlayer.pdb
+C:\Users\Nick\documents\visual studio 2015\Projects\MusicPlayer\MusicPlayer\obj\x86\Debug\MusicPlayer.albumButton.resources

@@ -21,7 +21,7 @@ namespace MusicPlayer
         private NAudio.Wave.AudioFileReader reader = null;
         private NAudio.Wave.DirectSoundOut output = null;
         
-
+        // Plays audio track
         public void Play(string FileName)
         {
             Console.Out.WriteLine("FileName is: " + FileName);
@@ -30,29 +30,33 @@ namespace MusicPlayer
             output.Init(new NAudio.Wave.WaveChannel32(reader));
             if(firstTime == true)
             {
-                setVolume((float) .5);
+                SetVolume((float) .5);
                 firstTime = false;
             }
             output.Play();
-            Program.MainForm.startTimer();
+            Program.MainForm.StartTimer();
         }
+
+        //Pauses music playback and stops trackbar
         public void Pause()
         {
             if (output != null)
             {
                 if (output.PlaybackState == NAudio.Wave.PlaybackState.Playing)
                 {
-                   Program.MainForm.stopTimer();
+                   Program.MainForm.StopTimer();
                    output.Pause();
                 }
                 else if (output.PlaybackState == NAudio.Wave.PlaybackState.Paused)
                 {
                     output.Play();
-                    Program.MainForm.startTimer();
+                    Program.MainForm.StartTimer();
                 }
 
             }
         }
+
+        // Stops music playback
         public void Stop()
         {
             if (output != null)
@@ -66,16 +70,21 @@ namespace MusicPlayer
                 reader = null;
             }
         }
-        public void setVolume(float volume)
+
+        // Called whent he volume slider is used to set the volume
+        public void SetVolume(float volume)
         {
             reader.Volume = volume;
             Console.Out.WriteLine("volume is is: " + reader.Volume);
         }
-        public void setPosition(long seconds)
+
+        // Sets the time of the audio playback when the trackbar value gets changed
+        public void SetPosition(long seconds)
         {
             reader.CurrentTime = (TimeSpan.FromSeconds(seconds));
         }
-
+        
+        // Calculates the length of the audio track so we can display it and use it to skip to certain times in the song
        public double GetMediaDuration(string MediaFilename)
         {
             double duration = 0.0;

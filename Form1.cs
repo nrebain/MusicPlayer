@@ -38,7 +38,7 @@ namespace MusicPlayer
             timer1.Interval = 1000;
             volumeTrackBar.Value = 50;
             // Use songs list to populate an album list
-            populateAlbumList();
+            PopulateAlbumList();
         }
 
 
@@ -156,7 +156,7 @@ namespace MusicPlayer
                 currTimeLbl.Text = "00:00";
                 ListViewItem item = listView1.SelectedItems[0];
                 //Console.Out.WriteLine("The two strings are: " + item.SubItems[1].Text+ " " + item.SubItems[2].Text);
-                Song selectedSong = getSong(item.SubItems[1].Text, item.SubItems[2].Text);
+                Song selectedSong = GetSong(item.SubItems[1].Text, item.SubItems[2].Text);
                 //Console.Out.WriteLine("Returned song is " + selectedSong.getTitle());
                 
                 //Set the now playing labels to the selected song
@@ -171,7 +171,7 @@ namespace MusicPlayer
         }
 
         //Sets the max size for the track bar
-        public void setTrackMax(int size)
+        public void SetTrackMax(int size)
         {
             this.seekBar.Maximum = size;
         }
@@ -223,11 +223,6 @@ namespace MusicPlayer
             Application.Exit();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         //Following code makes window movable
         private bool mouseDown;
         private Point lastLocation;
@@ -264,7 +259,7 @@ namespace MusicPlayer
 
         private void seekBar_MouseUp(object sender, MouseEventArgs e)
         {                     
-                MusicPlayer.Instance.setPosition(seekBar.Value);
+                MusicPlayer.Instance.SetPosition(seekBar.Value);
                 Console.Out.WriteLine("Time passed into change" + (seekBar.Value - PreviousValue));
         }
 
@@ -274,12 +269,12 @@ namespace MusicPlayer
         }
 
         //Timer for the song time starts
-        public void startTimer()
+        public void StartTimer()
         {
             timer1.Start();
         }
         //Timer for the song time stops
-        public void stopTimer()
+        public void StopTimer()
         {
             timer1.Stop();
         }
@@ -306,11 +301,11 @@ namespace MusicPlayer
             float volume = volumeTrackBar.Value/divisor;
             Console.Out.WriteLine("volumebar is at" + volumeTrackBar.Value);
             Console.Out.WriteLine("After math it is at" + volume);
-            MusicPlayer.Instance.setVolume(volume);
+            MusicPlayer.Instance.SetVolume(volume);
 
         }
         //Gets the Song object of a particular song given the title and artist
-        public Song getSong(string title, string artist)
+        public Song GetSong(string title, string artist)
         {
             for (int i = 0; i < currentList.Count; i++)
             {
@@ -324,7 +319,7 @@ namespace MusicPlayer
         }
 
         //Populates the albums List and displays them on the albumLayout in the form
-        public void populateAlbumList()
+        public void PopulateAlbumList()
         {
             String lastAlbumName = "empty";
             string albumArt = "empty";
@@ -362,7 +357,7 @@ namespace MusicPlayer
                 Panel newPanel = new Panel();
                 newPanel.Height = 125;
                 newPanel.Width = 100;
-                newPanel.Click += panelClick;
+                newPanel.Click += PanelClick;
                 //Create new buttont o go ont he new panel
                 Button newAlbum = new Button();
                 newAlbum.Anchor = AnchorStyles.Top;
@@ -405,7 +400,7 @@ namespace MusicPlayer
             IEnumerable<FileInfo> files = dir.EnumerateFiles();
             return files.Where(f => extensions.Contains(f.Extension));
         }
-        void panelClick(object sender, EventArgs e)
+        void PanelClick(object sender, EventArgs e)
         {
             Console.Out.WriteLine("Clicked on a panel");
             

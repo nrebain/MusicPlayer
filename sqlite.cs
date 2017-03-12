@@ -26,6 +26,7 @@ namespace MusicPlayer
                 fillDB();
             }
         }
+        // Gets all the songs from the database and puts them into a list
         public List<Song> getSongs()
         {
             List<Song> songsToReturn = new List<Song>();
@@ -76,7 +77,7 @@ namespace MusicPlayer
             }
             return songsToReturn;
         }
-        
+        // Gets all music files from the given directory 
         public void fillDB()
         {
             List<string> files = Directory.GetFiles(@"D:\TestMusic", "*.*", SearchOption.AllDirectories).ToList();
@@ -106,6 +107,8 @@ namespace MusicPlayer
                 }
             }
         }
+
+        // If the sqlite db doesnt exist, create it
         public void createDB()
         {
             Console.Out.WriteLine("Creating DB!");

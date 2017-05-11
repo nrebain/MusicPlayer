@@ -405,5 +405,10 @@ namespace MusicPlayer
             Console.Out.WriteLine("Clicked on a panel");
             
         }
+
+        private void artistLbl_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

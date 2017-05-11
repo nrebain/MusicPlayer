@@ -236,22 +236,23 @@
             // artistLbl
             // 
             this.artistLbl.BackColor = System.Drawing.Color.Black;
-            this.artistLbl.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.artistLbl.Font = new System.Drawing.Font("Arial", 7.75F);
             this.artistLbl.ForeColor = System.Drawing.Color.White;
-            this.artistLbl.Location = new System.Drawing.Point(73, 28);
+            this.artistLbl.Location = new System.Drawing.Point(91, 28);
             this.artistLbl.Name = "artistLbl";
-            this.artistLbl.Size = new System.Drawing.Size(122, 16);
+            this.artistLbl.Size = new System.Drawing.Size(104, 16);
             this.artistLbl.TabIndex = 5;
             this.artistLbl.Text = "Artist";
+            this.artistLbl.Click += new System.EventHandler(this.artistLbl_Click);
             // 
             // titleLbl
             // 
             this.titleLbl.BackColor = System.Drawing.Color.Black;
-            this.titleLbl.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleLbl.Font = new System.Drawing.Font("Arial Narrow", 12.75F);
             this.titleLbl.ForeColor = System.Drawing.Color.White;
-            this.titleLbl.Location = new System.Drawing.Point(70, 6);
+            this.titleLbl.Location = new System.Drawing.Point(86, 6);
             this.titleLbl.Name = "titleLbl";
-            this.titleLbl.Size = new System.Drawing.Size(125, 25);
+            this.titleLbl.Size = new System.Drawing.Size(109, 25);
             this.titleLbl.TabIndex = 4;
             this.titleLbl.Text = "Title";
             this.titleLbl.Click += new System.EventHandler(this.titleLbl_Click);
@@ -336,7 +337,7 @@
             this.logo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
-            this.logo.Location = new System.Drawing.Point(0, 0);
+            this.logo.Location = new System.Drawing.Point(5, 6);
             this.logo.Name = "logo";
             this.logo.Size = new System.Drawing.Size(153, 80);
             this.logo.TabIndex = 7;

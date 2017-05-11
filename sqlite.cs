@@ -17,11 +17,7 @@ namespace MusicPlayer
             if (!File.Exists("library.sqlite"))
             {
                 Console.Out.WriteLine("DB doesnt exist!!!");
-                Console.Out.WriteLine("DB doesnt exist!!!");
-                Console.Out.WriteLine("DB doesnt exist!!!");
-                Console.Out.WriteLine("DB doesnt exist!!!");
-                Console.Out.WriteLine("DB doesnt exist!!!");
-                Console.Out.WriteLine("DB doesnt exist!!!");
+              
                 createDB();  
                 fillDB();
             }
@@ -96,7 +92,7 @@ namespace MusicPlayer
                     }
                     double duration = MusicPlayer.Instance.GetMediaDuration(musicFile);
 
-                    string sql = "INSERT INTO songs (title, artist, album, filePath, duration) VALUES(@param1, @param2, @param3, @param4, @param5)";
+                    string sql = "INSERT OR IGNORE INTO songs (title, artist, album, filePath, duration) VALUES(@param1, @param2, @param3, @param4, @param5)";
                     SQLiteCommand command = new SQLiteCommand(sql, connection);
                     command.Parameters.Add(new SQLiteParameter("@param1", tagFile.Tag.Title));
                     command.Parameters.Add(new SQLiteParameter("@param2", tagFile.Tag.FirstAlbumArtist));
@@ -115,7 +111,7 @@ namespace MusicPlayer
             SQLiteConnection.CreateFile("library.sqlite");
             connection = new SQLiteConnection("Data Source=library.sqlite;Version=3;");
             connection.Open();
-            string sql = "create table songs (title varchar(255), artist varchar(255), album varchar(255), filePath varchar(255), duration double)";
+            string sql = "create table songs (title varchar(255), artist varchar(255), album varchar(255), filePath varchar(255), duration double, UNIQUE(title, artist, album))";
 
             SQLiteCommand command = new SQLiteCommand(sql, connection);
             command.ExecuteNonQuery();

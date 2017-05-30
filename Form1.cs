@@ -32,7 +32,7 @@ namespace MusicPlayer
             this.SetStyle(ControlStyles.ResizeRedraw, true);
             songs = sql.getSongs();
             currentList = songs;
-            populateSongsList();
+            PopulateSongsList();
             // fillList();
             //timer1.Enabled = true;
             timer1.Interval = 1000;
@@ -94,7 +94,7 @@ namespace MusicPlayer
         }
 
         //Initialise the songs list
-        public void populateSongsList()
+        public void PopulateSongsList()
         {
             int counter = 0;
             foreach (Song song in currentList)

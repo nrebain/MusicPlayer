@@ -99,10 +99,10 @@
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(149, 43);
+            this.listView1.Location = new System.Drawing.Point(154, 43);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(633, 442);
+            this.listView1.Size = new System.Drawing.Size(628, 442);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -168,7 +168,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(784, 83);
             this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // resize
             // 
@@ -399,9 +398,9 @@
             // 
             this.albumLayout.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.albumLayout.AutoScroll = true;
-            this.albumLayout.Location = new System.Drawing.Point(149, 43);
+            this.albumLayout.Location = new System.Drawing.Point(154, 43);
             this.albumLayout.Name = "albumLayout";
-            this.albumLayout.Size = new System.Drawing.Size(635, 438);
+            this.albumLayout.Size = new System.Drawing.Size(630, 438);
             this.albumLayout.TabIndex = 9;
             // 
             // Form1

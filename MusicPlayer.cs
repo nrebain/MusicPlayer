@@ -23,8 +23,7 @@ namespace MusicPlayer
         
         // Plays audio track
         public void Play(string FileName)
-        {
-            Console.Out.WriteLine("FileName is: " + FileName);
+        {    
             reader = new NAudio.Wave.AudioFileReader(FileName);
             output = new NAudio.Wave.DirectSoundOut();
             output.Init(new NAudio.Wave.WaveChannel32(reader));
